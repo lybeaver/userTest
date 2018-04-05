@@ -20,5 +20,5 @@ public class UserController {
 		System.out.println(num);
 		model.addAttribute("model", model);
 	   return "index";
-   }
+   }	
 }
