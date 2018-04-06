@@ -23,6 +23,27 @@
 	<listener>
 		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
 	</listener>
+	<servlet-mapping>  
+	    <servlet-name>default</servlet-name>  
+	    <url-pattern>*.png</url-pattern>  
+	    <url-pattern>*.jpg</url-pattern>  
+	    <url-pattern>*.gif</url-pattern>  
+	    <url-pattern>*.js</url-pattern>  
+	    <url-pattern>*.css</url-pattern>  
+	    <url-pattern>*.ico</url-pattern>  
+	    <url-pattern>*.zip</url-pattern>  
+	    <url-pattern>*.xml</url-pattern>  
+	    <url-pattern>*.mp3</url-pattern>
+	    <url-pattern>*.eot</url-pattern>
+	    <url-pattern>*.svg</url-pattern>
+	    <url-pattern>*.ttf</url-pattern>
+	    <url-pattern>*.woff</url-pattern>
+	    <url-pattern>*.woff2</url-pattern>
+	    <url-pattern>*.otf</url-pattern>
+	    <url-pattern>*.less</url-pattern>
+	    <url-pattern>*.scss</url-pattern>
+	    <url-pattern>*.html</url-pattern>   
+ 	 </servlet-mapping>
 	<servlet>
 		<servlet-name>springMvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -43,4 +64,13 @@
 	<session-config>
 		<session-timeout>15</session-timeout>
 	</session-config>
+	<error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/common/404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/common/exception.jsp</location>
+    </error-page>
 </web-app>

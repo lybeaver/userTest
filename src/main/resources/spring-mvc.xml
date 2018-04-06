@@ -7,5 +7,6 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
 	<context:component-scan base-package="user.course.controller" />
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/" p:suffix=".jsp" />
-</beans>
+    <mvc:resources location="/resources/" mapping="/resources/**" />  
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/" p:suffix="*.jsp" />  
+</beans>	
